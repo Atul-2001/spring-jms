@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Getter
@@ -15,7 +16,9 @@ import java.util.UUID;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Message {
+public class Message implements Serializable {
+
+    public static final long serialVersionUID = 1L;
 
     private UUID id;
     private String message;
